@@ -1,11 +1,11 @@
-package com.example.mysqlsharding;
+package com.qg.mysqlsharding;
 
-import com.example.mysqlsharding.mapper.DBModelMappr;
-import com.example.mysqlsharding.mapper.DeviceHourReportMapper;
-import com.example.mysqlsharding.model.DBModel;
-import com.example.mysqlsharding.model.DeviceHourReport;
-import com.example.mysqlsharding.model.User;
-import com.example.mysqlsharding.util.LoginThreadCacheUtil;
+import com.qg.mysqlsharding.mapper.DBModelMappr;
+import com.qg.mysqlsharding.mapper.DeviceHourReportMapper;
+import com.qg.mysqlsharding.model.DBModel;
+import com.qg.mysqlsharding.model.DeviceHourReport;
+import com.qg.mysqlsharding.model.User;
+import com.qg.mysqlsharding.util.LoginThreadCacheUtil;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +57,7 @@ class MysqlShardingApplicationTests {
             countDownLatch.countDown();
             try {
 //                countDownLatch.await();
-//                List<DeviceHourReport> deviceHourReports = deviceHourReportMapper.selectDeviceHourReportByLimit();
+                List<DeviceHourReport> deviceHourReports = deviceHourReportMapper.selectDeviceHourReportByLimit();
                 DeviceHourReport report = new DeviceHourReport();
                 report.setCount((int) countDownLatch.getCount());
                 report.setCreateDate(new Date());
@@ -70,7 +70,7 @@ class MysqlShardingApplicationTests {
                 report.setMaxValue(999D);
                 report.setDataName(user.getSqlSessionBeanName());
                 deviceHourReportMapper.insert(report);
-//                System.out.println(deviceHourReports);
+                System.err.println(deviceHourReports);
             } catch (Exception e) {
                 System.err.println(user.getSqlSessionBeanName());
                 e.printStackTrace();

@@ -1,4 +1,4 @@
-package com.example.mysqlsharding.model;
+package com.qg.mysqlsharding.model;
 
 import org.springframework.stereotype.Component;
 

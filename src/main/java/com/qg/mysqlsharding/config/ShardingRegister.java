@@ -1,33 +1,27 @@
-package com.example.mysqlsharding.config;
+package com.qg.mysqlsharding.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.example.mysqlsharding.mapper.DBModelMappr;
-import com.example.mysqlsharding.model.DBModel;
-import com.example.mysqlsharding.util.BeanDefinitionRegistrarUtil;
+import com.qg.mysqlsharding.mapper.DBModelMappr;
+import com.qg.mysqlsharding.model.DBModel;
+import com.qg.mysqlsharding.util.BeanDefinitionRegistrarUtil;
 import org.apache.ibatis.mapping.DatabaseIdProvider;
-import org.apache.ibatis.mapping.Environment;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.scripting.LanguageDriver;
-import org.apache.ibatis.session.Configuration;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.defaults.DefaultSqlSessionFactory;
 import org.apache.ibatis.type.TypeHandler;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.boot.autoconfigure.ConfigurationCustomizer;
 import org.mybatis.spring.boot.autoconfigure.MybatisProperties;
 import org.mybatis.spring.boot.autoconfigure.SpringBootVFS;
-import org.mybatis.spring.transaction.SpringManagedTransactionFactory;
 import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Component;
-import org.springframework.util.CollectionUtils;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
