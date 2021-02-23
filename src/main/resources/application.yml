@@ -11,7 +11,7 @@ spring:
 mybatis:
   mapper:
     package:
-      path: com.qg.mysqlsharding.mapper
+      path: com.qg89.mysqlsharding.mapper
   mapper-locations: mapper/*
   configuration:
     map-underscore-to-camel-case: true

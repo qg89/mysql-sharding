@@ -1,6 +1,6 @@
-package com.qg.mysqlsharding.util;
+package com.qg89.mysqlsharding.util;
 
-import com.qg.mysqlsharding.model.User;
+import com.qg89.mysqlsharding.model.User;
 
 public class LoginThreadCacheUtil {
 

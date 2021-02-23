@@ -1,9 +1,9 @@
-package com.qg.mysqlsharding.mapper;
+package com.qg89.mysqlsharding.mapper;
 
 
-import com.qg.mysqlsharding.anno.Sharding;
-import com.qg.mysqlsharding.model.DeviceHourReport;
-import com.qg.mysqlsharding.model.DeviceHourReportExample;
+import com.qg89.mysqlsharding.anno.Sharding;
+import com.qg89.mysqlsharding.model.DeviceHourReport;
+import com.qg89.mysqlsharding.model.DeviceHourReportExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;

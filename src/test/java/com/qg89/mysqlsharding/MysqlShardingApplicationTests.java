@@ -1,11 +1,11 @@
-package com.qg.mysqlsharding;
+package com.qg89.mysqlsharding;
 
-import com.qg.mysqlsharding.mapper.DBModelMappr;
-import com.qg.mysqlsharding.mapper.DeviceHourReportMapper;
-import com.qg.mysqlsharding.model.DBModel;
-import com.qg.mysqlsharding.model.DeviceHourReport;
-import com.qg.mysqlsharding.model.User;
-import com.qg.mysqlsharding.util.LoginThreadCacheUtil;
+import com.qg89.mysqlsharding.mapper.DBModelMappr;
+import com.qg89.mysqlsharding.mapper.DeviceHourReportMapper;
+import com.qg89.mysqlsharding.model.DBModel;
+import com.qg89.mysqlsharding.model.DeviceHourReport;
+import com.qg89.mysqlsharding.model.User;
+import com.qg89.mysqlsharding.util.LoginThreadCacheUtil;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

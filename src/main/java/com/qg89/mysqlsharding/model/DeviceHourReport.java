@@ -1,4 +1,4 @@
-package com.qg.mysqlsharding.model;
+package com.qg89.mysqlsharding.model;
 
 
 import java.io.Serializable;

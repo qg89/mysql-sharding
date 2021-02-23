@@ -1,4 +1,4 @@
-package com.qg.mysqlsharding;
+package com.qg89.mysqlsharding;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

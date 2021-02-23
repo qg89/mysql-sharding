@@ -1,6 +1,6 @@
-package com.qg.mysqlsharding.config;
+package com.qg89.mysqlsharding.config;
 
-import com.qg.mysqlsharding.util.BeanDefinitionRegistrarUtil;
+import com.qg89.mysqlsharding.util.BeanDefinitionRegistrarUtil;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 

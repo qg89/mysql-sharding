@@ -1,9 +1,9 @@
-package com.qg.mysqlsharding.config;
+package com.qg89.mysqlsharding.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import com.qg.mysqlsharding.mapper.DBModelMappr;
-import com.qg.mysqlsharding.model.DBModel;
-import com.qg.mysqlsharding.util.BeanDefinitionRegistrarUtil;
+import com.qg89.mysqlsharding.mapper.DBModelMappr;
+import com.qg89.mysqlsharding.model.DBModel;
+import com.qg89.mysqlsharding.util.BeanDefinitionRegistrarUtil;
 import org.apache.ibatis.mapping.DatabaseIdProvider;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.scripting.LanguageDriver;

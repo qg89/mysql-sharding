@@ -1,4 +1,4 @@
-package com.qg.mysqlsharding.util;
+package com.qg89.mysqlsharding.util;
 
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;

@@ -1,6 +1,6 @@
-package com.qg.mysqlsharding.mapper;
+package com.qg89.mysqlsharding.mapper;
 
-import com.qg.mysqlsharding.model.DBModel;
+import com.qg89.mysqlsharding.model.DBModel;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
