@@ -72,7 +72,6 @@ class MysqlShardingApplicationTests {
                 deviceHourReportMapper.insert(report);
                 System.err.println(deviceHourReports);
             } catch (Exception e) {
-                System.err.println(user.getSqlSessionBeanName());
                 e.printStackTrace();
             }
 
