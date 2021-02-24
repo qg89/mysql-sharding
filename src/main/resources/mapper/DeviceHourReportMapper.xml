@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.qg89.mysqlsharding.mapper.DeviceHourReportMapper">
-  <resultMap id="BaseResultMap" type="com.qg89.mysqlsharding.model.DeviceHourReport">
+<mapper namespace="com.qg.common.mysqlsharding.mapper.DeviceHourReportMapper">
+  <resultMap id="BaseResultMap" type="com.qg.common.mysqlsharding.model.DeviceHourReport">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="device_id" jdbcType="BIGINT" property="deviceId" />
     <result column="substation_id" jdbcType="BIGINT" property="substationId" />
@@ -76,7 +76,7 @@
     id, device_id, substation_id, monitor_idx, start_time, end_time, value, max_value, 
     min_value, count, create_date
   </sql>
-  <select id="selectByExample" parameterType="com.qg89.mysqlsharding.model.DeviceHourReportExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.qg.common.mysqlsharding.model.DeviceHourReportExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
@@ -101,13 +101,13 @@
     delete from sta_device_hour_report
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <delete id="deleteByExample" parameterType="com.qg89.mysqlsharding.model.DeviceHourReportExample">
+  <delete id="deleteByExample" parameterType="com.qg.common.mysqlsharding.model.DeviceHourReportExample">
     delete from sta_device_hour_report
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.qg89.mysqlsharding.model.DeviceHourReport">
+  <insert id="insert" parameterType="com.qg.common.mysqlsharding.model.DeviceHourReport">
     insert into sta_device_hour_report (id, device_id, substation_id, 
       monitor_idx, start_time, end_time, 
       value, max_value, min_value, 
@@ -117,7 +117,7 @@
       #{value,jdbcType=DOUBLE}, #{maxValue,jdbcType=DOUBLE}, #{minValue,jdbcType=DOUBLE}, 
       #{count,jdbcType=INTEGER}, #{createDate,jdbcType=TIMESTAMP},#{dataName,jdbcType=VARBINARY})
   </insert>
-  <insert id="insertSelective" parameterType="com.qg89.mysqlsharding.model.DeviceHourReport">
+  <insert id="insertSelective" parameterType="com.qg.common.mysqlsharding.model.DeviceHourReport">
     insert into sta_device_hour_report
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -190,7 +190,7 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.qg89.mysqlsharding.model.DeviceHourReportExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.qg.common.mysqlsharding.model.DeviceHourReportExample" resultType="java.lang.Long">
     select count(*) from sta_device_hour_report
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
@@ -254,7 +254,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.qg89.mysqlsharding.model.DeviceHourReport">
+  <update id="updateByPrimaryKeySelective" parameterType="com.qg.common.mysqlsharding.model.DeviceHourReport">
     update sta_device_hour_report
     <set>
       <if test="deviceId != null">
@@ -290,7 +290,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.qg89.mysqlsharding.model.DeviceHourReport">
+  <update id="updateByPrimaryKey" parameterType="com.qg.common.mysqlsharding.model.DeviceHourReport">
     update sta_device_hour_report
     set device_id = #{deviceId,jdbcType=BIGINT},
       substation_id = #{substationId,jdbcType=BIGINT},

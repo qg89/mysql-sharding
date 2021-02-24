@@ -1,11 +1,11 @@
-package com.qg89.mysqlsharding;
+package com.qg.common.mysqlsharding;
 
-import com.qg89.mysqlsharding.mapper.DBModelMappr;
-import com.qg89.mysqlsharding.mapper.DeviceHourReportMapper;
-import com.qg89.mysqlsharding.model.DBModel;
-import com.qg89.mysqlsharding.model.DeviceHourReport;
-import com.qg89.mysqlsharding.model.User;
-import com.qg89.mysqlsharding.util.LoginThreadCacheUtil;
+import com.qg.common.mysqlsharding.mapper.DBModelMappr;
+import com.qg.common.mysqlsharding.mapper.DeviceHourReportMapper;
+import com.qg.common.mysqlsharding.model.DBModel;
+import com.qg.common.mysqlsharding.model.DeviceHourReport;
+import com.qg.common.mysqlsharding.model.User;
+import com.qg.common.mysqlsharding.util.LoginThreadCacheUtil;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,7 +57,7 @@ class MysqlShardingApplicationTests {
             countDownLatch.countDown();
             try {
 //                countDownLatch.await();
-                List<DeviceHourReport> deviceHourReports = deviceHourReportMapper.selectDeviceHourReportByLimit();
+//                List<DeviceHourReport> deviceHourReports = deviceHourReportMapper.selectDeviceHourReportByLimit();
                 DeviceHourReport report = new DeviceHourReport();
                 report.setCount((int) countDownLatch.getCount());
                 report.setCreateDate(new Date());
@@ -70,7 +70,7 @@ class MysqlShardingApplicationTests {
                 report.setMaxValue(999D);
                 report.setDataName(user.getSqlSessionBeanName());
                 deviceHourReportMapper.insert(report);
-                System.err.println(deviceHourReports);
+//                System.err.println(deviceHourReports);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -79,7 +79,7 @@ class MysqlShardingApplicationTests {
     }
 
 
-    @Test
+//    @Test
     public void insertDB() {
 
         for (int i = 1; i <= 3; i++) {

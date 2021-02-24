@@ -1,4 +1,4 @@
-package com.qg89.mysqlsharding.model;
+package com.qg.common.mysqlsharding.model;
 
 public class User {
 

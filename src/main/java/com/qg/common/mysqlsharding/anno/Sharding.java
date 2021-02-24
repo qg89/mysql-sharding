@@ -1,4 +1,4 @@
-package com.qg89.mysqlsharding.anno;
+package com.qg.common.mysqlsharding.anno;
 
 
 import java.lang.annotation.*;

@@ -1,9 +1,9 @@
-package com.qg89.mysqlsharding.aop;
+package com.qg.common.mysqlsharding.aop;
 
-import com.qg89.mysqlsharding.anno.Sharding;
-import com.qg89.mysqlsharding.model.User;
-import com.qg89.mysqlsharding.util.ApplicationContextUtil;
-import com.qg89.mysqlsharding.util.LoginThreadCacheUtil;
+import com.qg.common.mysqlsharding.anno.Sharding;
+import com.qg.common.mysqlsharding.model.User;
+import com.qg.common.mysqlsharding.util.ApplicationContextUtil;
+import com.qg.common.mysqlsharding.util.LoginThreadCacheUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -21,7 +21,7 @@ import java.util.stream.Stream;
 @Component
 public class ShardingAop {
 
-    @Pointcut("execution(public * com.qg89.mysqlsharding.mapper.*.*(..)))")
+    @Pointcut("execution(public * com.qg.common.mysqlsharding.mapper.*.*(..)))")
     public void shardingAop() {
     }
 

@@ -1,4 +1,4 @@
-package com.qg89.mysqlsharding.util;
+package com.qg.common.mysqlsharding.util;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;

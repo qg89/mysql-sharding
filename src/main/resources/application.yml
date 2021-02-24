@@ -1,19 +1,30 @@
-server:
-  port: 8080
+#server:
+#  port: 8080
+#
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
+#    username: root
+#    password:
+#
+#mybatis:
+#  mapper:
+#    package:
+#      path: com.qg89.mysqlsharding.mapper
+#  mapper-locations: mapper/*
+#  configuration:
+#    map-underscore-to-camel-case: true
 
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false&serverTimezone=UTC
-    username: root
-    password:
+  application:
+    name: mysql-sharding
+#  server:
+#    port: 8848
+#    address: 119.3.193.97
 
-mybatis:
-  mapper:
-    package:
-      path: com.qg89.mysqlsharding.mapper
-  mapper-locations: mapper/*
-  configuration:
-    map-underscore-to-camel-case: true
-
-
+nacos:
+  config:
+    server-addr: 119.3.193.97:8848
+#  discovery:
+#    server-addr: 119.3.193.97:8848
