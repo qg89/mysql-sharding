@@ -10,9 +10,10 @@ import java.util.List;
 @Mapper
 public interface DBModelMappr {
 
-    @Select("SELECT * FROM DBModel")
+    @Select("SELECT * FROM DBMODEL")
     List<DBModel> list();
 
+    @Deprecated
     @Insert("INSERT INTO DBMODEL VALUES(NULL,#{beanName},#{driver},#{url},#{username},#{password})")
     Integer insert(DBModel dbModel);
 }

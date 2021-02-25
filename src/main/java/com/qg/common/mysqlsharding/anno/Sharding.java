@@ -3,6 +3,11 @@ package com.qg.common.mysqlsharding.anno;
 
 import java.lang.annotation.*;
 
+/**
+ * 将要切换的Mapper加入此注解
+ * @author qig
+ * @date 2021年2月25日
+ */
 @Documented
 @Inherited
 @Retention(RetentionPolicy.RUNTIME)

@@ -3,7 +3,7 @@ package com.qg.common.mysqlsharding.config;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.qg.common.mysqlsharding.mapper.DBModelMappr;
 import com.qg.common.mysqlsharding.model.DBModel;
-import com.qg.common.mysqlsharding.util.BeanDefinitionRegistrarUtil;
+import com.qg.common.mysqlsharding.utils.BeanDefinitionRegistrarUtils;
 import org.apache.ibatis.mapping.DatabaseIdProvider;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.scripting.LanguageDriver;
@@ -92,7 +92,7 @@ public class ShardingRegister  implements ApplicationListener<ContextRefreshedEv
                 //这里sqlsessionTempleate 创建需要构造方法传递SqlSessionFactory 对象
                 beanDefinitionBuilder.addConstructorArgValue(newSqlSessionFactory);
                 //注册到spring
-                BeanDefinitionRegistrarUtil.registerBeanDefinition(dbModel.getBeanName(), beanDefinitionBuilder.getBeanDefinition());
+                BeanDefinitionRegistrarUtils.registerBeanDefinition(dbModel.getBeanName(), beanDefinitionBuilder.getBeanDefinition());
             }
         }catch (Exception e){
             e.printStackTrace();

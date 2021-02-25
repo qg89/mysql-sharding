@@ -4,6 +4,7 @@ package com.qg.common.mysqlsharding.model;
 import java.io.Serializable;
 import java.util.Date;
 
+@Deprecated
 public class DeviceHourReport  implements Serializable {
     /**
      * 主键id

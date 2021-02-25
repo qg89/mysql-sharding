@@ -2,8 +2,8 @@ package com.qg.common.mysqlsharding.aop;
 
 import com.qg.common.mysqlsharding.anno.Sharding;
 import com.qg.common.mysqlsharding.model.User;
-import com.qg.common.mysqlsharding.util.ApplicationContextUtil;
-import com.qg.common.mysqlsharding.util.LoginThreadCacheUtil;
+import com.qg.common.mysqlsharding.utils.ApplicationContextUtils;
+import com.qg.common.mysqlsharding.utils.LoginThreadCacheUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -47,9 +47,9 @@ public class ShardingAop {
             //执行的参数
             Object[] args = pjp.getArgs();
             //获取登录人
-            User user = LoginThreadCacheUtil.getUser();
+            User user = LoginThreadCacheUtils.getUser();
             //获取当前人的sqlsession
-            SqlSession sqlSession = ApplicationContextUtil.getBean(user.getSqlSessionBeanName(), SqlSession.class);
+            SqlSession sqlSession = ApplicationContextUtils.getBean(user.getSqlSessionBeanName(), SqlSession.class);
             //获取mapper
 //            System.err.println("获取MapperSession" + sqlSession.getConnection().getSchema());
             Object mapper = sqlSession.getMapper(mapperClass);

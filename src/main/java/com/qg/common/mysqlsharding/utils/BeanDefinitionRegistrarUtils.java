@@ -1,11 +1,11 @@
-package com.qg.common.mysqlsharding.util;
+package com.qg.common.mysqlsharding.utils;
 
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;
 import org.springframework.core.type.AnnotationMetadata;
 
-public class BeanDefinitionRegistrarUtil implements ImportBeanDefinitionRegistrar {
+public class BeanDefinitionRegistrarUtils implements ImportBeanDefinitionRegistrar {
 
     private static BeanDefinitionRegistry beanDefinitionRegistry;
 

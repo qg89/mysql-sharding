@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Deprecated
 public class DeviceHourReportExample {
     /**
      * sta_device_hour_report

@@ -1,10 +1,10 @@
 package com.qg.common.mysqlsharding.config;
 
-import com.qg.common.mysqlsharding.util.BeanDefinitionRegistrarUtil;
+import com.qg.common.mysqlsharding.utils.BeanDefinitionRegistrarUtils;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
-@Import(BeanDefinitionRegistrarUtil.class)
+@Import(BeanDefinitionRegistrarUtils.class)
 @Configuration
 public class ShardingConfig {
 }

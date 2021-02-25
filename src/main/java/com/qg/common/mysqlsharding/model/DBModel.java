@@ -1,9 +1,14 @@
 package com.qg.common.mysqlsharding.model;
 
+import org.apache.commons.lang3.builder.EqualsBuilder;
+import org.apache.commons.lang3.builder.HashCodeBuilder;
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.springframework.stereotype.Component;
 
+import java.io.Serializable;
+
 @Component
-public class DBModel {
+public class DBModel implements Serializable {
 
 
     private String beanName;
@@ -50,5 +55,36 @@ public class DBModel {
 
     public void setBeanName(String beanName) {
         this.beanName = beanName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (!(o instanceof DBModel)) {
+            return false;
+        }
+
+        DBModel dbModel = (DBModel) o;
+
+        return new EqualsBuilder().append(beanName, dbModel.beanName).append(driver, dbModel.driver).append(url, dbModel.url).append(username, dbModel.username).append(password, dbModel.password).isEquals();
+    }
+
+    @Override
+    public int hashCode() {
+        return new HashCodeBuilder(17, 37).append(beanName).append(driver).append(url).append(username).append(password).toHashCode();
+    }
+
+    @Override
+    public String toString() {
+        return new ToStringBuilder(this)
+                .append("beanName", beanName)
+                .append("driver", driver)
+                .append("url", url)
+                .append("username", username)
+                .append("password", password)
+                .toString();
     }
 }

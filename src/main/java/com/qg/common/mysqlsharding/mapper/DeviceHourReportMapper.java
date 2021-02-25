@@ -13,6 +13,7 @@ import java.util.List;
 
 @Mapper
 @Sharding
+@Deprecated
 public interface DeviceHourReportMapper {
     long countByExample(DeviceHourReportExample example);
 
@@ -40,13 +41,4 @@ public interface DeviceHourReportMapper {
 
     int batchInsertSelective(@Param("list") List<DeviceHourReport> list, @Param("selective") DeviceHourReport.Column... selective);
 
-    int filingAbnormal(@Param("endTime") Date endTime);
-    int deletAbnormalFiled(@Param("endTime") Date endTime);
-
-    int filingPushMsg(@Param("endTime") Date endTime);
-    int deletPushMsgFiled(@Param("endTime") Date endTime);
-
-
-    @Select("SELECT * FROM STA_DEVICE_HOUR_REPORT")
-    List<DeviceHourReport> selectDeviceHourReportByLimit();
 }

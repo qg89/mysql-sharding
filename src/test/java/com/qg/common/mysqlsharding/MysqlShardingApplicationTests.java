@@ -5,7 +5,7 @@ import com.qg.common.mysqlsharding.mapper.DeviceHourReportMapper;
 import com.qg.common.mysqlsharding.model.DBModel;
 import com.qg.common.mysqlsharding.model.DeviceHourReport;
 import com.qg.common.mysqlsharding.model.User;
-import com.qg.common.mysqlsharding.util.LoginThreadCacheUtil;
+import com.qg.common.mysqlsharding.utils.LoginThreadCacheUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Date;
-import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -53,7 +52,7 @@ class MysqlShardingApplicationTests {
 
         @Override
         public void run() {
-            LoginThreadCacheUtil.setUser(user);
+            LoginThreadCacheUtils.setUser(user);
             countDownLatch.countDown();
             try {
 //                countDownLatch.await();
