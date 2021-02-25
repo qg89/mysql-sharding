@@ -20,7 +20,7 @@ public class LoginThreadCacheUtils {
      * @param sqlSessionBeanName 数据源对应名称
      */
     public static void setUser(String sqlSessionBeanName){
-        threadLocal.set(User.UserBuilder.anUser().sqlSessionFactoryBeanName(sqlSessionBeanName).build());
+        threadLocal.set(User.UserBuilder.anUser().sqlSessionBeanName(sqlSessionBeanName).build());
     }
 
     public static User getUser(){
